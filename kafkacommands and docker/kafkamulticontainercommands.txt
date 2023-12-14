@@ -1,0 +1,66 @@
+kafka github link
+https://github.com/bharaththippireddy
+
+Kafka installation:
+Download the docker zip file
+1.https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2/ and run
+2. docker-compose up
+
+To create a topic
+$ docker exec -it kafka1 bash
+$ kafka-topics --bootstrap-server kafka1:19092 --create --topic practice-topic --replication-factor 1 --partitions 1
+To list the kafka topics
+
+$ docker exec --interactive --tty kafka1  kafka-topics --bootstrap-server kafka1:19092 --list
+
+Produce Messages with Key and Value to topic
+$ docker exec --interactive --tty kafka1  kafka-console-producer --bootstrap-server kafka1:19092  --topic test-topic  --property "key.separator=-" --property "parse.key=true"
+
+Consuming messages with Key and Value from a topic.
+$ docker exec --interactive --tty kafka1  kafka-console-consumer --bootstrap-server kafka1:19092  --topic test-topic --from-beginning --property "key.separator= - " --property "print.key=true"
+
+To view the Consumer Groups
+
+$ docker exec --interactive --tty kafka1  kafka-consumer-groups --bootstrap-server kafka1:19092 --list
+
+
+Consume Messages Using Consumer Groups
+
+$ docker exec --interactive --tty kafka1  kafka-console-consumer --bootstrap-server kafka1:19092  --topic test-topic --group console-consumer-31155 --property "key.separator= - " --property "print.key=true"
+
+To describe kafka specific topic
+$ docker exec --interactive --tty kafka1  kafka-topics --bootstrap-server kafka1:19092 --describe --topic test-topic
+
+To alter Topic Partitions
+$ docker exec --interactive --tty kafka1  kafka-topics --bootstrap-server kafka1:19092 --alter --topic test-topic --partitions 2
+
+Kafka Cluster
+Setup a kafka cluster with 3 brokers
+$ docker-compose -f docker-compose-multi-broker.yml up
+
+kafka topic for cluster with replication factor as 3
+$ docker exec --interactive --tty kafka1  kafka-topics --bootstrap-server kafka1:19092  --create --topic testcluster-topic --replication-factor 3 --partitions 3
+
+produce the messages to topic of cluster
+
+$ docker exec --interactive --tty kafka1  kafka-console-producer --bootstrap-server localhost:9092,kafka2:19093,kafka3:19094 --topic testcluster-topic
+
+consume messages to topic of cluster
+
+$docker exec --interactive --tty kafka1 kafka-console-consumer --bootstrap-server localhost:9092,kafka2:19093,kafka3:19094 --topic testcluster-topic --from-beginning
+
+
+################ for kafka spring boot app #######################
+consume message command for consuming the messages
+$docker exec --interactive --tty kafka1 kafka-console-consumer --bootstrap-server kafka1:19092  --topic library-events --from-beginning
+
+To describe the topic
+$ docker exec --interactive --tty kafka1  kafka-topics --bootstrap-server kafka1:19092 --describe --topic library-events
+
+To create the consumer Group
+
+$docker exec --interactive --tty kafka1 kafka-console-consumer --bootstrap-server localhost:9092,kafka2:19093,kafka3:19094 --topic testcluster-topic --group cg1
+
+
+
+Apache Kafka tutorials for beginners: https://www.youtube.com/watch?v=cmzhqv1ZqGA&list=PLa6iDxjj_9qVGTh3jia-DAnlQj9N-VLGp&index=2
