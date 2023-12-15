@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "6524a131-4209-4d7b-84ef-9b1f282bf33d",
+		"name": "springdatamongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/tasks/newtask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n   \"description\": \"healthtask\",\r\n   \"priority\":\"p1\",\r\n   \"asignee\":\"Nanda\",\r\n   \"storyPoint\":1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/tasks/newtask"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tasks/taskid/cb5658a3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/tasks/taskid/cb5658a3"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tasks/update/task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\": \"cb5658a3\",\r\n    \"description\": \"implement PICR entitlement\",\r\n    \"priority\": \"P2\",\r\n    \"asignee\": \"Srikanth Annamaneni\",\r\n    \"storyPoint\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/tasks/update/task"
+			},
+			"response": []
+		}
+	]
+}

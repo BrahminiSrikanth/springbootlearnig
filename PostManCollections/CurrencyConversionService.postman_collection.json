@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "8fa22e85-cb17-4d46-9127-1da25fb772a0",
+		"name": "CurrencyConversionService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8100/currency-conversion/from/AUD/to/INR/quantity/2000"
+			},
+			"response": []
+		},
+		{
+			"name": "FeignCall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8100/currency-conversionfeign/from/AUD/to/INR/quantity/5000"
+			},
+			"response": []
+		}
+	]
+}

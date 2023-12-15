@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "6ce59214-0c2e-46d4-ad34-e57faec28a08",
+		"name": "SpringDataJpa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"firstName\":\"Brahmini\",\r\n    \"lastName\":\"Basina\",\r\n    \"email\":\"brahminisrikanth@gmail.com\",\r\n    \"dob\":\"16/03/1994\",\r\n    \"phone\":\"9494082736\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9191/customers/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9191/customers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9191/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9191/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all customershttp://localhost:9191/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9191/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:9191/customers/1"
+			},
+			"response": []
+		}
+	]
+}

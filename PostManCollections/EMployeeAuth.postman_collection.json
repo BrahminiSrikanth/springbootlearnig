@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "b4f3cd09-2aff-4960-b2a2-ee7833c2ab17",
+		"name": "EMployeeAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "WelcomeRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:9091/employees/welcome"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n   \"name\":\"Brahmini\",\r\n   \"dept\":\"Engineer\",\r\n   \"email\":\"brahminisrikanth@gmail.com\",\r\n   \"salary\":600000,\r\n   \"userName\":\"brahmini\",\r\n   \"password\":\"pwd2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9091/employees/create"
+			},
+			"response": []
+		},
+		{
+			"name": "GetListEMployees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "pwd3",
+						"username": "srikanth"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:9091/employees/all"
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "pwd2",
+						"username": "Brahmini"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:9091/employees/3"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "srikanth",
+						"password": "pwd3"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\":1,\r\n   \"name\":\"Srika\",\r\n   \"dept\":\"Doctor\",\r\n   \"email\":\"srikannnamaneni@gmail.com\",\r\n   \"salary\":500000,\r\n   \"userName\":\"srika\",\r\n   \"password\":\"pwd1\",\r\n   \"roles\":\"ROLE_HR,ROLE_MANAGER\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9091/employees/update"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "3beee016-aef2-4419-a2f9-92fdb5bbe6d3",
+		"name": "KakfaSpringBootBasicExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"libraryEventId\": 4,\r\n    \"libraryEventType\": \"NEW\",\r\n    \"book\": {\r\n        \"bookId\": 248,\r\n        \"bookName\": \"Devops Using SPring Boot\",\r\n        \"bookAuthor\": \"Srikanth\"\r\n    }\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/libraryevent"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"libraryEventId\": 1,\r\n    \"libraryEventType\": \"UPDATE\",\r\n    \"book\": {\r\n        \"bookId\": 248,\r\n        \"bookName\": \"Devops Using SPring Boot\",\r\n        \"bookAuthor\": \"Srikanth\"\r\n    }\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/libraryevent"
+			},
+			"response": []
+		},
+		{
+			"name": "PostNull Event",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"info": {
+		"_postman_id": "1b1fa620-7a07-4988-ba3d-0142d7bc5ca5",
+		"name": "Currency-ExchangeService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/currency-exchange/from/AUD/to/INR"
+			},
+			"response": []
+		}
+	]
+}

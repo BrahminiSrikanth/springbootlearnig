@@ -1,0 +1,29 @@
+kafka commands on single container
+$ docker exec -it kafka1 bash
+To create topic
+$ kafka-topics --bootstrap-server kafka1:19092 --create --topic javatechie-topic --replication-factor 1 --partitions 3
+
+TO describe topic
+$ kafka-topics --bootstrap-server kafka1:19092 --describe --topic javatechie-topic
+
+to publish message to topic without key
+$ kafka-console-producer --bootstrap-server kafka1:19092  --topic javatechie-topic
+
+to consume message from topic without key
+$ kafka-console-consumer --bootstrap-server kafka1:19092  --topic javatechie-topic --from-beginning
+
+to copy the file from local to docker container
+$ docker cp "Orbit Vulnerability Summary.xlsx" a8891f11e438:/home/appuser/"Orbit Vulnerability Summary.xlsx"
+
+to publish the data from file to topic
+$ kafka-console-producer --bootstrap-server kafka1:19092  --topic javatechie-topic <orbitvulnerability.csv 
+
+
+to list the consumer groups
+
+$
+################ for kafka spring boot app #######################
+
+$ kafka-console-consumer-groups --bootstrap-server kafka1:19092  --list
+
+$ kafka-console-consumer-groups --bootstrap-server kafka1:19092  --describe --group cg1

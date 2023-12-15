@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "05211237-41f6-435a-a97a-8db2113d5246",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21891072"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/5"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"shoes\",\r\n    \"price\": 2999,\r\n    \"description\": \"puma latest arriavl\",\r\n    \"productType\": \"Fashion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/6",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"shoes\",\r\n    \"price\":4999,\r\n    \"description\": \"puma second arriavl\",\r\n    \"productType\": \"Fashion plus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products/6"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/type/Electronics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/type/Electronics"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/name/price/80000/type/ELectronics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/name/price/80000/type/ELectronics"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[10000,4999,80000,5500]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products/search"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/min/10000/max/80000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/min/10000/max/80000"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/greater/10000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/greater/10000"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/Less/10000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/Less/10000"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/sort/productType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/sort/productType"
+			},
+			"response": []
+		}
+	]
+}

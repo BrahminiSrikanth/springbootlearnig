@@ -1,0 +1,8 @@
+Docker desktop installation for windows
+
+1.Enable Wsl2, Hyperv by turinng windows features "On or off"
+2.type wsl --update --web-download"
+3.docker credentials (username:brahminibasina,password:Srisai@9199)
+4. dokcer pull rabbitmq:3.12.8-management
+
+
