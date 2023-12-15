@@ -1,0 +1,25 @@
+Udemycourse links
+
+
+------------------------ java -----------------------------------------------------------------------------------
+
+1. java17 master class by Tim Buchalka
+2. modern-java-learn-java-8-features-by-coding-it  by 
+Pragmatic Code School
+
+-------------------------- SpringBoot ----------------------------------------------------------------------------
+1. Master Microservices with Spring Boot and Spring Cloud (in28 minutes)
+2. Master Spring Data JPA with Hibernate: E-Commerce Project (ramesh fadatre)
+3.[NEW] Master Spring Boot 3 & Spring Framework 6 with Java  (in28 minutes)
+4. Docker for Beginners: DevOps for Java & Spring Boot (in28minutes)
+5. Apache Kafka for Developers using Spring Boot[LatestEdition] by pragmatic code school
+
+------------------------------- AWS Devops ------------------------------------------------------------------------
+1.Learn AWS - Deploy Java Spring Boot to AWS Elastic Beanstalk (in28 minutes)
+2. Docker and Kubernetes: The Complete Guide by stephen grider
+
+
+
+
+
+ 
